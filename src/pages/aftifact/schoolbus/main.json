@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "校车",
+  "usingComponents": {
+    "i-action-sheet": "../../../iview/action-sheet/index"
+  }
+}
+  
