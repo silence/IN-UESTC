@@ -23,6 +23,7 @@
     "build": "node build/build.js wx"
   },
   "dependencies": {
+    "moment": "^2.24.0",
     "mpvue": "^2.0.0",
     "vuex": "^3.0.1"
   },
