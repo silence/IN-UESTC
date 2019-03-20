@@ -25,8 +25,23 @@ const testData = [
     course_time: '5-8',
     course_day: 3,
     course_location: '品学楼C-403'
-  }
+  },
+  {
+    course_id: '002',
+    course_name: '微积分',
+    course_time: '1-2',
+    course_day: 1,
+    course_location: '品学楼C-403'
+  },
+  {
+    course_id: '003',
+    course_name: '线性代数',
+    course_time: '5-6',
+    course_day: 1,
+    course_location: '品学楼C-403'
+  },
 ];
+const colors = ['#FFFFCC', '#CCFFFF', '#FFCCCC', '#FFCC99', '#CCFF99', '#CCFFCC', '#FF6666', '#CCCCFF', '#99CCCC', '#66CCFF'];
 export default {
   name: "date",
   components: { Course },
@@ -58,20 +73,10 @@ export default {
       })
     },
     courseList() {
-      return testData.map(item => {
-        const [courseStart, courseEnd] = item.course_time.split('-');
-        const courseLength = courseEnd - courseStart + 1;
-
-        return {
-          x: (item.course_day - 1) * this.courseWidth,
-          y: (courseStart - 1) * this.courseHeight,
-          width: this.courseWidth,
-          height: this.courseHeight * courseLength,
-          name: item.course_name,
-          location: item.course_location,
-          color: '#ccc'
-        }
-      });
+      return testData.map(item => ({
+        ...item,
+        color: colors[Math.floor(Math.random()*10)]
+      }));
     }
   }
 }
@@ -81,14 +86,14 @@ export default {
 .date-axis {
   height: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
   padding-right: 10px;
 
   .date-axis-item {
     border-radius: 5px;
-    flex: 0 0 40px;
+    flex: 0 0 50px;
     height: 40px;
     box-sizing: border-box;
     display: flex;
@@ -115,6 +120,7 @@ export default {
     line-height: 60px;
     padding-left: 5px;
     border-bottom: 1px dashed #eee;
+    box-sizing: border-box;
   }
 }
 
@@ -122,7 +128,8 @@ export default {
   position: absolute;
   top: 50px;
   left: 20px;
-  
+  height: 100%;
+  width: 100%;
 }
 
 </style>
