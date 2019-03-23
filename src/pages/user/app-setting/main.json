@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "设置",
-  "usingComponents": {
-    "i-button": "../../iview/button/index"
-  }
-}

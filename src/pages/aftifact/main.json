@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "神器",
-  "usingComponents": {
-    "i-cell-group": "../../iview/cell-group/index",
-    "i-cell": "../../iview/cell/index"
-  }
-}
-  

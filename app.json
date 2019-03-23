@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/date/main",
+    "pages/aftifact/schoolbus/query/main",
+    "pages/aftifact/main",
+    "pages/aftifact/schoolbus/main",
+    "pages/user/main",
+    "pages/user/login/main",
+    "pages/user/app-setting/main",
+    "pages/user/feedback/main",
+    "pages/user/aboutus/main",
+    "pages/ground/main",
+    "pages/arrivals/main"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "usingComponents": {
+    "i-message": "./dist/iview/message/index"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/date/main",
+        "text": "日程",
+        "iconPath": "static/icon/date.png",
+        "selectedIconPath": "static/icon/date-active.png"
+      },
+      {
+        "pagePath": "pages/aftifact/schoolbus/query/main",
+        "text": "神器",
+        "iconPath": "static/icon/aftifact.png",
+        "selectedIconPath": "static/icon/aftifact-active.png"
+      },
+      {
+        "pagePath": "pages/ground/main",
+        "text": "广场",
+        "iconPath": "static/icon/ground.png",
+        "selectedIconPath": "static/icon/ground-active.png"
+      },
+      {
+        "pagePath": "pages/arrivals/main",
+        "text": "直达",
+        "iconPath": "static/icon/arrivals.png",
+        "selectedIconPath": "static/icon/arrivals-active.png"
+      },
+      {
+        "pagePath": "pages/user/main",
+        "text": "我的",
+        "iconPath": "static/icon/user.png",
+        "selectedIconPath": "static/icon/user-active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+/* pages/date/main.wxss */
+.date-axis {
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40rpx;
+  padding-right: 20rpx;
+}
+
+.date-axis-item {
+  border-radius: 10rpx;
+  flex: 0 0 100rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.day {
+  font-size: 26rpx;
+}
+
+.date {
+  font-size: 24rpx;
+}
+
+.currday {
+  background: #ccc;
+}
+
+.no-axis {
+  font-size: 26rpx;
+}
+
+.no-axis-item {
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 10rpx;
+  border-bottom: 1rpx dashed #eee;
+  box-sizing: border-box;
+}
+
+.date-body {
+  position: absolute;
+  top: 100rpx;
+  left: 40rpx;
+  height: 100%;
+  width: 100%;
+}

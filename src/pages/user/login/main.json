@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "绑定学号",
-  "usingComponents": {
-    "i-input": "../../iview/input/index",
-    "i-button": "../../iview/button/index"
-  }
-}

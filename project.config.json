@@ -1,5 +1,8 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
@@ -8,10 +11,14 @@
 		"newFeature": true,
 		"autoAudits": false
 	},
-	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
 	"appid": "wxf7815f3e2180822b",
 	"projectname": "uestc-home-wxapp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,

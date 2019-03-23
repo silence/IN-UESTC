@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "问题反馈",
-  "usingComponents": {
-    "i-button": "../../iview/button/index",
-    "i-input": "../../iview/input/index"
-  }
-}
-  
