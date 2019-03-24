@@ -1,77 +1,78 @@
 .course {
   position: absolute;
   z-index: 3;
-  width: 50px;
+  width: 94rpx;
   box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 5px;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  padding: 10rpx;
   color: #fff;
+  box-shadow: 2rpx 2rpx #eee;
 }
 
 .row-1 {
-  height: 60px;
+  height: 112rpx;
 }
 .row-2 {
-  height: 120px;
+  height: 232rpx;
 }
 
 .row-3 {
-  height: 180px;
+  height: 352rpx;
 }
 
 .row-4 {
-  height: 240px;
+  height: 472rpx;
 }
 
 .row-8 {
-  height: 480px;
+  height: 952rpx;
 }
 
 .top-1 {
-  top: 0
+  top: 0rpx
 }
 
 .top-3 {
-  top: 120px;
+  top: 240rpx;
 }
 
 .top-5 {
-  top: 240px;
+  top: 480rpx;
 }
 
 .top-7 {
-  top: 360px;
+  top: 720rpx;
 }
 
 .top-9 {
-  top: 480px;
+  top: 960rpx;
 }
 
 .left-1 {
-  left: 0px;
+  left: 3rpx;
 }
 
 .left-2 {
-  left: 50px;
+  left: 103rpx;
 }
 
 .left-3 {
-  left: 100px;
+  left: 203rpx;
 }
 
 .left-4 {
-  left: 150px;
+  left: 303rpx;
 }
 
 .left-5 {
-  left: 200px;
+  left: 403rpx;
 }
 
 .left-6 {
-  left: 250px;
+  left: 503rpx;
 }
 
 .left-7 {
-  left: 300px;
+  left: 603rpx;
 }

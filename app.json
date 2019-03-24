@@ -1,14 +1,8 @@
 {
   "pages": [
     "pages/date/main",
-    "pages/aftifact/schoolbus/query/main",
     "pages/aftifact/main",
-    "pages/aftifact/schoolbus/main",
     "pages/user/main",
-    "pages/user/login/main",
-    "pages/user/app-setting/main",
-    "pages/user/feedback/main",
-    "pages/user/aboutus/main",
     "pages/ground/main",
     "pages/arrivals/main"
   ],
@@ -30,7 +24,7 @@
         "selectedIconPath": "static/icon/date-active.png"
       },
       {
-        "pagePath": "pages/aftifact/schoolbus/query/main",
+        "pagePath": "pages/aftifact/main",
         "text": "神器",
         "iconPath": "static/icon/aftifact.png",
         "selectedIconPath": "static/icon/aftifact-active.png"
