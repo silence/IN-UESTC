@@ -1,1 +1,98 @@
 /* pages/aftifact/schoolbus/main.wxss */
+.schoolbus {
+  padding: 0 20rpx;
+  padding-top: 25rpx;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.query {
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  box-shadow: 2rpx 2rpx 20rpx #ccc;
+}
+
+.start,
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 0 0 160rpx;
+  height: 80rpx;
+}
+
+.transfer {
+  display: inline-flex;
+  flex: 0 0 1;
+  margin: 0 60rpx;
+}
+
+.schoolbus-body {
+  margin-top: 20rpx;
+  box-shadow: 2rpx 2rpx 20rpx #ccc;
+  background: #fff;
+  border-radius: 10rpx;
+  padding-top: 20rpx;
+}
+
+.weekbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: rgb(41, 41, 41);
+}
+
+.weekday {
+  flex: 0 0 48rpx;
+  text-align: center;
+}
+
+.weekday-curr {
+  color: rgb(19, 19, 19);
+  font-weight: 500;
+}
+
+.schoolbus-list {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+
+.list-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+}
+
+.schoolbus-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+  height: 80rpx;
+}
+
+.time {
+  flex: 1 1 96rpx;
+}
+
+.type {
+  flex: 1 1 96rpx;
+}
+
+.board {
+  flex: 1 1 160rpx;
+}
+
+.stations {
+  flex: 1 1 10rpx;
+}
+

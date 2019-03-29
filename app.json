@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/aftifact/schoolbus/main",
     "pages/date/main",
     "pages/aftifact/main",
     "pages/user/main",
@@ -24,7 +25,7 @@
         "selectedIconPath": "static/icon/date-active.png"
       },
       {
-        "pagePath": "pages/aftifact/main",
+        "pagePath": "pages/aftifact/schoolbus/main",
         "text": "神器",
         "iconPath": "static/icon/aftifact.png",
         "selectedIconPath": "static/icon/aftifact-active.png"

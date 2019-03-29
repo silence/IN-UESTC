@@ -39,7 +39,7 @@
   height: 120rpx;
   line-height: 120rpx;
   padding-left: 10rpx;
-  border-bottom: 1rpx dashed #222;
+  border-bottom: 1rpx dashed #eee;
   box-sizing: border-box;
 }
 

@@ -4,10 +4,15 @@ Component({
   },
 
   data: {
-    classList: []
+    mode: 'default'
   },
 
   properties: {
+    visible: {
+      type: Boolean,
+      value: false
+    },
+    
     course: {
       type: Object,
       value: {

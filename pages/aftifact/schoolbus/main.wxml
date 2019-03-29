@@ -1,2 +1,54 @@
-<!--pages/aftifact/schoolbus/main.wxml-->
-<text>pages/aftifact/schoolbus/main.wxml</text>
+<view class="schoolbus page">
+  <view class="query">
+    <view class="start">{{ start }}</view>
+    <view class="transfer">
+      <i class="icon iconfont icon-cycle"></i>
+    </view>
+    <view class="end">{{ end }}</view>
+  </view>
+  <i-action-sheet
+    visible="{{ startListVisible }}"
+    list="{{ list }}"
+  >
+  </i-action-sheet>
+  <i-action-sheet
+    visible="{{ endListVisible }}"
+    list="{{ list }}"
+  >
+  </i-action-sheet>
+  <view class="schoolbus-body">
+    <view class="weekbar">
+      <view 
+        wx:for="{{ weekdays }}"
+        wx:for-item="weekday"
+        wx:for-index="idx"
+        wx:key="idx"
+        class="{{ ['weekday', weekday.curr && 'weekday-curr'] }}"
+      >
+      {{ weekday.label }}
+      </view>
+    </view>
+    <view class="schoolbus-list">
+      <view class="list-title">
+        <view class="time">出发时间</view>
+        <view class="type">校车</view>
+        <view class="board">起点</view>
+        <view class="stations">经停</view>
+      </view>
+      <view 
+        class="schoolbus-info"
+        wx:for="{{ schoolbusList }}"
+        wx:for-item="bus"
+        wx:for-index="idx"
+        wx:key="idx"
+      >
+        <view class="time">{{ bus.time }}</view>
+        <view class="type">{{ bus.type }}</view>
+        <view class="board">{{ bus.board }}</view>
+        <view class="stations">
+          <i class="icon iconfont icon-pos"></i>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
