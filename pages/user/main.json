@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "i-cell-group": "/dist/iview/cell-group/index",
+    "i-cell": "/dist/iview/cell/index",
+    "i-button": "/dist/iview/button/index"
+  }
 }

@@ -1,1 +1,57 @@
-/* pages/user/main.wxss */
+.user-info {
+  height: 160rpx;
+  align-items: center;
+  margin-bottom: 4rpx;
+  display: flex;
+  padding: 0 40rpx;
+  align-items: center;
+  background: #fff;
+}
+
+.user-info-left {
+  height: 120rpx;
+  width: 120rpx;
+  margin-right: 30rpx;
+}
+
+.username {
+  font-size: 30rpx;
+}
+
+.user-status {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: red;
+}
+
+.is-bound {
+  color: #ccc;
+}
+
+.aboutme {
+  display: flex;
+  padding: 0 40rpx;
+  align-items: center;
+  background: #fff;
+  height: 160rpx;
+  padding: 0 80rpx;
+  justify-content: space-between;
+}
+
+.item {
+  text-align: center;  
+}
+
+.item-name {
+  font-size: 12px;
+}
+
+.navigator-group {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.share {
+  margin-top: 40px;
+  overflow: hidden;
+}

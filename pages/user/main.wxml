@@ -1,2 +1,56 @@
-<!--pages/user/main.wxml-->
-<text>pages/user/main.wxml</text>
+<view class="user page">
+  <view class="user-info">
+    <view class="user-info-left">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user-info-right">
+      <view class="username">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class="{{ ['user-status', isBound&&'is-bound'] }}">
+        <text bind:tap="bindHandle">{{ isBound ? '已绑定' : '点击绑定学号' }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="aboutme">
+    <view class="item item-message">
+      <navigator url="./message">
+        <i class="icon iconfont icon-message"></i>
+        <view class="item-name">我的消息</view>
+      </navigator>
+    </view>
+    <view class="item item-issue">
+      <navigator url="./issue">
+        <i class="icon iconfont icon-issue"></i>
+        <view class="item-name">我的发布</view>
+      </navigator>
+    </view>
+    <view class="item item-profile">
+      <navigator url="./profile">
+        <i class="icon iconfont icon-profile"></i>
+        <view class="item-name">我的简介</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="navigator-group">
+    <i-cell-group>
+      <i-cell i-class="personality" title="个性化设置" is-link url="./personal-setting/main" link-type="navigateTo"></i-cell>
+      <i-cell i-class="system" title="小程序设置" is-link url="./app-setting/main" link-type="navigateTo"></i-cell>
+    </i-cell-group>
+  </view>
+  <view class="navigator-group">
+    <i-cell-group>
+      <i-cell i-class="personality" title="个性化设置" is-link url="./personal-setting/main" link-type="navigateTo"></i-cell>
+      <i-cell i-class="system" title="小程序设置" is-link url="./app-setting/main" link-type="navigateTo"></i-cell>
+    </i-cell-group>
+  </view>
+  <view class="navigator-group">
+    <i-cell-group>
+      <i-cell i-class="feedback" title="问题设置" is-link url="./feedback/main" link-type="navigateTo"></i-cell>
+      <i-cell i-class="aboutus" title="关于我们" is-link url="./aboutus/main" link-type="navigateTo"></i-cell>
+    </i-cell-group>
+  </view>
+  <view class="share">
+    <i-button open-type="share" type="success" class="share">分享</i-button>
+  </view>
+</view>

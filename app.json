@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/user/main",
     "pages/aftifact/schoolbus/main",
     "pages/date/main",
     "pages/aftifact/main",
-    "pages/user/main",
     "pages/ground/main",
     "pages/arrivals/main"
   ],

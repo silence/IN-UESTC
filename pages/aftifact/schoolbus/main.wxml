@@ -1,19 +1,23 @@
 <view class="schoolbus page">
   <view class="query">
-    <view class="start">{{ start }}</view>
-    <view class="transfer">
+    <view class="start" bind:tap="showStartActions">{{ start }}</view>
+    <view class="transfer" bind:tap="exchangeHandle">
       <i class="icon iconfont icon-cycle"></i>
     </view>
-    <view class="end">{{ end }}</view>
+    <view class="end" bind:tap="showEndActions">{{ end }}</view>
   </view>
   <i-action-sheet
-    visible="{{ startListVisible }}"
-    list="{{ list }}"
+    visible="{{ startVisible }}"
+    actions="{{ list }}"
+    bind:cancel="cancelHandle"
+    bind:click="selectStart"
   >
   </i-action-sheet>
   <i-action-sheet
-    visible="{{ endListVisible }}"
-    list="{{ list }}"
+    visible="{{ endVisible }}"
+    actions="{{ list }}"
+    bind:cancel="cancelHandle"
+    bind:click="selectEnd"
   >
   </i-action-sheet>
   <view class="schoolbus-body">
