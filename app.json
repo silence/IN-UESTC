@@ -1,5 +1,6 @@
 {
   "pages": [
+    "page/user/login/main",
     "pages/user/main",
     "pages/aftifact/schoolbus/main",
     "pages/date/main",
@@ -8,15 +9,13 @@
     "pages/arrivals/main"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ccc",
-    "navigationBarTextStyle": "black",
-    "backgroundTextStyle": "light"
+    "navigationStyle": "custom"
   },
   "usingComponents": {
     "i-message": "./dist/iview/message/index"
   },
   "tabBar": {
-    "selectedColor": "#1296db",
+    "selectedColor": "#4cc9ac",
     "list": [
       {
         "pagePath": "pages/date/main",

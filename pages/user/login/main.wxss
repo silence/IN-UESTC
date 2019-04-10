@@ -1,1 +1,49 @@
-/* pages/user/login/main.wxss */
+.login {
+  height: 100vh;
+}
+
+.image {
+  width: 100%;
+  height: 100rpx;
+}
+
+.tips {
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  color: #aaa;
+}
+
+.err {
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  color:red;
+}
+
+.vertification {
+  padding:7px 15px;
+  color:#495060;
+  position:relative;
+  top: -2rpx;
+  display:flex;
+  background:#fff;
+  align-items:center;
+  line-height:1.4;
+  font-size:14px;
+  overflow:hidden;
+}
+
+.vertification .label {
+  color:#495060;
+  min-width:65px;
+  padding-right:10px;
+}
+
+.vertification input {
+  flex:1;
+  line-height:1.6;
+  padding:4px 0;
+  min-height:22px;
+  height:auto;
+  font-size:14px;
+  margin-left: 20rpx;
+}
