@@ -1,12 +1,14 @@
 {
   "pages": [
-    "page/user/login/main",
-    "pages/user/main",
-    "pages/aftifact/schoolbus/main",
     "pages/date/main",
     "pages/aftifact/main",
+    "pages/arrivals/main",
+    "pages/user/main",
+    "pages/user/message/main",
+    "pages/user/profile/main",
+    "pages/aftifact/schoolbus/main",
     "pages/ground/main",
-    "pages/arrivals/main"
+    "pages/user/issue/main"
   ],
   "window": {
     "navigationStyle": "custom"
@@ -24,7 +26,7 @@
         "selectedIconPath": "static/icon/date-active.png"
       },
       {
-        "pagePath": "pages/aftifact/schoolbus/main",
+        "pagePath": "pages/aftifact/main",
         "text": "神器",
         "iconPath": "static/icon/aftifact.png",
         "selectedIconPath": "static/icon/aftifact-active.png"

@@ -1,2 +1,3 @@
-<!--pages/user/aboutus/main.wxml-->
-<text>pages/user/aboutus/main.wxml</text>
+<view class="aboutus page">
+  <header isBack bg title="关于我们"></header>
+</view>

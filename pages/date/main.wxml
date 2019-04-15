@@ -1,5 +1,6 @@
 <!--pages/date/main.wxml-->
 <view class="date-page">
+  <header isBack bg title="IN成电"></header>
   <view class="date-axis">
     <view  
       wx:for="{{weeks}}" 

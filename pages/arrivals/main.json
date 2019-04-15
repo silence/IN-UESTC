@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "header": "/components/normalHeader/index",
+    "item-panel": "/components/itemPanel/index"
+  }
 }

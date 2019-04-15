@@ -1,4 +1,5 @@
 <view class="user page">
+  <header title="IN成电"></header>
   <view class="bg"></view>
   <view class="hd">
     <image class="wave" src="/static/images/wave.png" mode="aspectFill"></image>
@@ -17,19 +18,19 @@
   </view>
   <view class="aboutme">
     <view class="item item-message">
-      <navigator url="./message">
+      <navigator url="./message/main">
         <i class="icon iconfont icon-message"></i>
         <view class="item-name">我的消息</view>
       </navigator>
     </view>
     <view class="item item-issue">
-      <navigator url="./issue">
+      <navigator url="./issue/main">
         <i class="icon iconfont icon-issue"></i>
         <view class="item-name">我的发布</view>
       </navigator>
     </view>
     <view class="item item-profile">
-      <navigator url="./profile">
+      <navigator url="./profile/main">
         <i class="icon iconfont icon-profile"></i>
         <view class="item-name">我的简介</view>
       </navigator>
@@ -48,3 +49,4 @@
   </view>
 </view>
 <i-message id="message" />
+<i-toast id="toast" />

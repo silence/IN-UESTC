@@ -67,6 +67,10 @@
   color: #fff;
   top: 160rpx;
   left: 50rpx;
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
  
 .user-info {
@@ -159,15 +163,16 @@
 }
 
 .share::after {
-  content:" ";
-  display:inline-block;
-  width:6px;
-  height:6px;
+  content:'';
   position:absolute;
-  top: 50%;
-  right:17px;
-  border-width:1px 1px 0 0;
-  border-color:#dddee1;
-  border-style: solid;
-  transform:translateY(-50%) matrix(.71,.71,-.71,.71,0,0)
+  top:0;
+  left:0;
+  width:200%;
+  height:200%;
+  transform:scale(.5);
+  transform-origin:0 0;
+  pointer-events:none;
+  box-sizing:border-box;
+  border:0 solid #e9eaec;
+  border-bottom-width:1px;
 }

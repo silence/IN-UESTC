@@ -1,0 +1,69 @@
+/* components/itemPanel/index.wxss */
+@import "/iconfont.wxss";
+
+.item-panel {
+  padding: 0 30rpx;
+  margin-top: 30rpx;
+}
+
+.title {
+  margin-bottom: 10rpx;
+  padding-left: 16rpx;
+  font-size: 32rpx;
+  font-family: "黑体"
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.list-item {
+  flex: 0 0 160rpx;
+  height: 150rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.icon {
+  font-size: 50rpx;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  font-size: 24rpx;
+}
+ 
+.icon-stud-work,
+.icon-charges,
+.icon-spoken,
+.icon-studyroom {
+  color: #1296db
+}
+
+.icon-gpa {
+  color: #e81a4b;
+}
+
+.icon-platform, 
+.icon-contact,
+.icon-library,
+.icon-repair {
+  color: #f8b207
+}
+
+.icon-foursix {
+  color: #30C37C;
+  font-size: 60rpx;
+}
+
+.icon-safe {
+  color: #30C37C;
+}
+
+.icon-studyroom {
+  font-size: 60rpx;
+
+}

@@ -1,4 +1,4 @@
-// page/user/login/main.js
+// pages/user/issue/main.js
 Page({
 
   /**

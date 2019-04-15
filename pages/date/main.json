@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "日程",
   "usingComponents": {
-    "course": "/components/course/index"
+    "course": "/components/course/index",
+    "header": "/components/normalHeader/index"
   }
 }

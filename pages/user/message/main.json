@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "header": "/components/normalHeader/index",
+    "i-tabs": "/dist/iview/tabs/index",
+    "i-tab": "/dist/iview/tab/index",
+    "i-badge": "/dist/iview/badge/index"
+  }
+}

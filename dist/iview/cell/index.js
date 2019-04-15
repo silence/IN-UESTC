@@ -82,5 +82,6 @@ Component({
         updateIsLastCell (isLastCell) {
             this.setData({ isLastCell });
         }
-    }
+    },
+
 });

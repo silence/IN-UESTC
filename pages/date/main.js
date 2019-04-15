@@ -42,7 +42,7 @@ Page({
     return testData.map((item, idx) => ({
       ...item,
       // color: colors[Math.floor(Math.random()*10)]
-      color: colors[idx]
+      color: colors[item.course_id]
     }));
   },
 

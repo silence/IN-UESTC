@@ -1,0 +1,17 @@
+<!--components/itemPanel/index.wxml-->
+<view class="item-panel">
+  <view class="title">{{ title }}</view>
+  <view class="list">
+    <view 
+      class="list-item"
+      wx:for="{{ list }}" 
+      wx:for-index="idx"
+      wx:key="{{ idx }}"
+    >
+      <view class="icon" >
+        <i class="icon iconfont {{ item.icon }}"></i>
+      </view>
+      <view class="text">{{ item.text }}</view>
+    </view>
+  </view>
+</view>

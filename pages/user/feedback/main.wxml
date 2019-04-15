@@ -1,2 +1,17 @@
-<!--pages/user/feedback/main.wxml-->
-<text>pages/user/feedback/main.wxml</text>
+<view class="feedback page">
+  <header isBack bg title="问题反馈"></header>
+  <view class="panel">
+    <view class="panel-title">
+      <text>* 内容描述</text>
+    </view>
+    <view class="panel-body">
+      <i-input 
+        type="textarea"
+        placeholder="告诉我们您遇到的问题，我们会第一时间处理"
+        maxlength="300"
+        bindchange="inputHandle"
+      ></i-input>
+    </view>
+  </view>
+  <button class="submit" bindtap="submitHandle">提交</button>
+</view>

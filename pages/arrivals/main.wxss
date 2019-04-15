@@ -1,1 +1,9 @@
 /* pages/arrivals/main.wxss */
+.banner {
+  margin-top: 140rpx;
+  height: 260rpx;
+}
+
+.slide-image {
+  width: 100%;
+}

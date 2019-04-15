@@ -2,7 +2,8 @@
   height: 100vh;
 }
 
-.image {
+.bg {
+  margin-top: 140rpx;
   width: 100%;
   height: 100rpx;
 }
@@ -46,4 +47,18 @@
   height:auto;
   font-size:14px;
   margin-left: 20rpx;
+}
+
+.login-btn {
+  line-height: 60rpx;
+  height: 60rpx;
+  width: 300rpx;
+  background: #4cc9ac;
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 80rpx;
+}
+
+.login-btn::after {
+  border: none;
 }

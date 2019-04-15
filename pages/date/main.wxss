@@ -1,5 +1,6 @@
 /* pages/date/main.wxss */
 .date-axis {
+  margin-top: 140rpx;
   height: 100rpx;
   display: flex;
   justify-content: flex-start;
@@ -39,13 +40,28 @@
   height: 120rpx;
   line-height: 120rpx;
   padding-left: 10rpx;
-  border-bottom: 1rpx dashed #eee;
   box-sizing: border-box;
+  position: relative;
+}
+
+.no-axis-item::after {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:200%;
+  height:200%;
+  transform:scale(.5);
+  transform-origin:0 0;
+  pointer-events:none;
+  box-sizing:border-box;
+  border:0 solid #e9eaec;
+  border-bottom-width:1px;
 }
 
 .date-body {
   position: absolute;
-  top: 100rpx;
+  top: 240rpx;
   left: 40rpx;
   height: 100%;
   width: 100%;

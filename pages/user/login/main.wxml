@@ -1,4 +1,5 @@
 <view class="page login">
+  <header isBack bg title="UESTC身份认证"></header>
   <image 
     class="bg" 
     src="/static/images/bg.png" 
@@ -44,6 +45,6 @@
     <view class="err" wx:if="{{ errMsg }}">
       <text>{{ errMsg }}</text>
     </view>
-    <i-button bind:click="submitHandle" type="success">登陆</i-button>
+    <button bind:click="submitHandle" class="login-btn">登录</button>
   </view>
 </view>
