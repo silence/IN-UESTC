@@ -1,0 +1,50 @@
+<view class="lost page">
+  <header isBack bg title="失物招领"></header>
+  <view class="main">
+    <view class="banner">
+      <view class="search">
+        <i-icon type="search" color="#ccc" size="18"/>
+        <i-input value="{{ name }}" placeholder="搜索" />
+      </view>
+      <view class="add">发布</view>
+    </view>
+    <view class="list">
+      <view
+        class="list-item"
+      >
+        <view class="detail">
+          <view class="name">香奈儿5号淡香水 用过两次 几乎全新 味道迷人 有需要的美女请带走 包邮 拍下后不退换 在北京的朋友可以上门自取</view>
+          <view class="time"> 2018-9-20 18:00:00</view>
+          <view class="desc">描述啦啦啦啦啦啦</view>
+        </view>
+        <view class="photo">
+          <image src="http://img.alicdn.com/bao/uploaded/i2/O1CN01shAFU21VMhktNTy2b_!!0-fleamarket.jpg" mode="aspectFill"/>
+        </view>
+      </view>
+      <view
+        class="list-item"
+      >
+        <view class="detail">
+          <view class="name">韩都衣舍～温柔毛衣裙女冬宽松韩版学生中长款过膝内搭2018… 颜色分类棕红色（天猫品质）,尺码均码</view>
+          <view class="time"> 2018-9-20 18:00:00</view>
+          <view class="desc">描述啦啦啦啦啦啦</view>
+        </view>
+        <view class="photo">
+          <image src="http://img.alicdn.com/bao/uploaded/i2/1766047907/O1CN0128HSA3UPwaauFyY_!!1766047907.jpg" mode="aspectFill"/>
+        </view>
+      </view>
+      <view
+        class="list-item"
+      >
+        <view class="detail">
+          <view class="name">韩国代购女装正品2015新款COCO浪漫情人唯美… 颜色分类绿色,尺码均码</view>
+          <view class="time"> 2018-9-20 18:00:00</view>
+          <view class="desc">描述啦啦啦啦啦啦</view>
+        </view>
+        <view class="photo">
+          <image src="http://img.alicdn.com/bao/uploaded/i2/TB12WxLKXXXXXbTXpXXXXXXXXXX_!!0-item_pic.jpg" mode="aspectFill"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

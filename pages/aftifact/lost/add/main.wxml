@@ -1,0 +1,36 @@
+<view class="page">
+  <header isBack bg title="失物招领"></header>
+  <view class="main">
+    <view class="row">
+      <view class="label">类型</view>
+      <view class="value">
+        <radio-group>
+          <label>
+            <radio value="lost" /> 报失
+          </label>
+          <label>
+            <radio value="found" /> 招领
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">物品</view>
+      <view class="value">
+        <input value="{{ name }}" />
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">地点</view>
+      <view class="value">
+        <input value="{{ place }}" />
+      </view>
+    </view>
+    <view class="row">
+      <view class="label">地点</view>
+      <view class="value">
+        <input value="{{ place }}" />
+      </view>
+    </view>
+  </view>
+</view>

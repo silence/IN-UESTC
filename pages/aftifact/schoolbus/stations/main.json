@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "校车查询",
+  "usingComponents": {
+    "header": "/components/normalHeader/index"
+  }
+}

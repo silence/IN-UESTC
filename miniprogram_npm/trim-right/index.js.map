@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"index.js","sourcesContent":["\nmodule.exports = function (str) {\n\tvar tail = str.length;\n\n\twhile (/[\\s\\uFEFF\\u00A0]/.test(str[tail - 1])) {\n\t\ttail--;\n\t}\n\n\treturn str.slice(0, tail);\n};\n"]}

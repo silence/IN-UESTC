@@ -1,0 +1,27 @@
+<view class="page">
+  <header isBack bg title="消息发布"></header>
+  <view class="main">
+    <view class="form">
+      <textarea placeholder="说些什么吧" value="{{ content }}" bindinput="inputHandle"></textarea>
+      <!-- <view class="images">
+        <view 
+          class="image"
+          wx:for="{{ images }}" 
+          wx:for-item="item" 
+          wx:for-index="idx"
+        >
+          <image  
+            src="{{item}}"
+            key="{{idx}}"
+            mode="aspectFill"
+          />
+          <i-icon type="close" class="clear" data-id="{{idx}}" bindtap="deleteHandle"/>
+        </view>
+        <view class="image add" bindtap="chooseHandle">
+          <image class="upload" src="../../../static/images/upload_image.png" />
+        </view>
+      </view> -->
+    </view>
+    <view bindtap="submitHandle" class="button">发布</view>
+  </view>
+</view>

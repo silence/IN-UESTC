@@ -1,0 +1,22 @@
+<view class="page">
+  <header isBack bg title="消息详情"></header>
+  <view class="main">
+    <news news="{{ news }}" />
+    <view class="reply">
+      <view 
+        class="item"
+        wx:for="{{reply}}"
+        wx:for-item="item"
+        wx:for-index="idx"
+        key="{{ idx }}"
+      >
+        <view class="content">{{ item.content }}</view>
+        <view class="time">{{ item.time }}</view>
+      </view>
+    </view>
+    <view class="input">
+      <textarea auto-height value="{{ text }}" placeholder="写评论"></textarea>
+      <view class="submit">发送</view>
+    </view>
+  </view>
+</view>

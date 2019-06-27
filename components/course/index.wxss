@@ -13,6 +13,7 @@
 .row-1 {
   height: 112rpx;
 }
+
 .row-2 {
   height: 232rpx;
 }
@@ -30,7 +31,7 @@
 }
 
 .top-1 {
-  top: 0rpx
+  top: 0rpx;
 }
 
 .top-3 {

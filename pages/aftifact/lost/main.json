@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header": "/components/normalHeader/index",
+    "i-icon": "/dist/iview/icon/index",
+    "i-input": "/dist/iview/input/index"
+  }
+}

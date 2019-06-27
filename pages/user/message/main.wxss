@@ -30,7 +30,7 @@
   height: 80rpx;
 }
 
-.avator {
+.avatar {
   width: 80rpx;
   height: 80rpx;
   background-color: #ffaf03;
@@ -44,7 +44,7 @@
   transform: translate(10rpx, -10rpx)
 }
 
-.system-avator {
+.system-avatar {
   background-color: #ffaf03;
 }
 

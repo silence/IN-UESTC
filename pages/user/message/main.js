@@ -35,7 +35,7 @@ Page({
       {
         id: 111,
         title: '鞠婧祎给你点赞了',
-        avator: 'https://tvax3.sinaimg.cn/crop.0.0.749.749.180/dab20f8dly8fg4yi5hsb3j20ku0ktmxw.jpg',
+        avatar: 'https://tvax3.sinaimg.cn/crop.0.0.749.749.180/dab20f8dly8fg4yi5hsb3j20ku0ktmxw.jpg',
         content: '',
         time: '1分钟前',
         is_read: true
@@ -43,7 +43,7 @@ Page({
       {
         id: 113,
         title: '赵敏给你回复了',
-        avator: 'https://tvax3.sinaimg.cn/crop.0.0.512.512.180/006mwaFnly8fnnxnmxwqoj30e80e8wer.jpg',
+        avatar: 'https://tvax3.sinaimg.cn/crop.0.0.512.512.180/006mwaFnly8fnnxnmxwqoj30e80e8wer.jpg',
         content: '老铁666',
         time: '2分钟前',
         is_read: true

@@ -1,4 +1,6 @@
 //app.js
+import http from './utils/http';
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -9,7 +11,13 @@ App({
     // 登录
     wx.login({
       success: res => {
+        console.log(res);
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        http('http://112.74.180.184/app_be/public/index.php/user/Wechat/getOpenId', { code: res.code }, 'POST')
+          .then(res => {
+            wx.setStorageSync('openid', res.openid);
+            wx.setStorageSync('session_key', res.session_key);
+          });
       }
     })
     // 获取用户信息

@@ -17,8 +17,8 @@
       >
         <i-badge dot="{{ !item.is_read }}">
           <view class="notice-header">
-            <view class="['avator', {{ current + '-avator' }}]">
-              <image class="img" wx-if="{{ current=== 'other' }}" src="{{ item.avator }}"></image>
+            <view class="['avatar', {{ current + '-avatar' }}]">
+              <image class="img" wx-if="{{ current=== 'other' }}" src="{{ item.avatar }}"></image>
               <i class="icon iconfont icon-notice" wx-if="{{ current=== 'system' }}"></i>
             </view>
           </view>

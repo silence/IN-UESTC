@@ -1,14 +1,18 @@
 // pages/aftifact/schoolbus/main.js
 import moment from 'moment';
-import list from './data';
+import http from '../../../utils/http';
+
 Page({
   data: {
     weekdays: [],
     list: [],
-    start: '起点',
-    end: '终点',
+    result: {},
+    start: '清水河校区',
+    end: '沙河校区',
     startVisible: false,
-    endVisible: false
+    endVisible: false,
+    currDay: moment().format('E'),
+    schoolbusList: []
   },
 
   computeList(){ 
@@ -29,6 +33,26 @@ Page({
     }));
   },
 
+  computeData(d) {
+    let date = d || this.data.currDay;
+    if (!this.data.result) return [];
+    let data = '';
+    if (date === moment().format('E')) {
+      data = this.data.result.today;
+    } else if (date === '6' || date === '7'){
+      data = this.data.result.weekend;
+    } else {
+      data = this.data.result.weekday;
+    };
+
+    data.forEach(item => {
+      item.time = item.time.split(':')[0] + ":" +item.time.split(':')[1]
+      item.type = this.getBusName(item.type);
+    }); 
+
+    return data;
+  },
+
   exchangeHandle() {
     if (this.start === '起点' || this.end === '终点') return;
     let temp = this.data.start;
@@ -36,6 +60,16 @@ Page({
     this.setData({
       start: this.data.end,
       end: temp
+    })
+  },
+
+  changeDate(e) {
+    let idx = e.currentTarget.id;
+    if (!this.data.start || !this.data.end || !this.data.schoolbusList) return;
+
+    this.setData({
+      currDay: String(idx + 1),
+      schoolbusList: this.computeData(String(idx + 1))
     })
   },
 
@@ -70,13 +104,46 @@ Page({
       end: this.data.list[detail.index].name,
       endVisible: false
     });
+    this.searchHandle();
+  },
+
+  tapHandle(e) {
+    let id = e.currentTarget.dataset.id;
+    let bus = this.data.schoolbusList[id];
+
+    wx.setStorage({
+      key: 'currBus',
+      data: JSON.stringify(bus)
+    });
+
+    wx.navigateTo({ url: './stations/main'})
+  },
+
+  searchHandle() {
+    if (!this.data.start || this.data.start === this.data.end) return;
+    
+    return http('http://112.74.180.184/app_be/public/index.php/bus/bus/getBusInfo', { start: this.data.start, end: this.data.end }, 'POST')
+      .then(({ data }) => {
+        this.setData({
+          result: data
+        });
+      });
+  },
+
+  getBusName(type) {
+    if (type === 'student') return '学生班车';
+    else if (type === 'teacher') return '教职工班车';
+    else if (type === '396') return '396路公交车';
   },
 
   onLoad() {
-    this.setData({
-      list: this.computeList(),
-      weekdays: this.computeWeeks(),
-      schoolbusList: list
-    })
+    this.searchHandle().then(() => {
+      this.setData({
+        list: this.computeList(),
+        weekdays: this.computeWeeks(),
+        schoolbusList: this.computeData()
+      });
+    });
+    
   }
 })

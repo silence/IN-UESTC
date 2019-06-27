@@ -1,9 +1,12 @@
 /* pages/aftifact/schoolbus/main.wxss */
 .schoolbus {
-  padding: 0 20rpx;
-  padding-top: 25rpx;
   height: 100vh;
   overflow: scroll;
+}
+
+.main {
+  margin-top: 70px;
+  padding: 20px;
 }
 
 .query {

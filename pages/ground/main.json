@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "header": "/components/normalHeader/index",
+    "news": "/components/news/index",
+    "i-icon": "/dist/iview/icon/index"
+  }
 }

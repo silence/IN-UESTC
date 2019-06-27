@@ -2,7 +2,7 @@
 <view class="profile page">
   <header isBack bg title="个人资料"></header>  
   <view class="detail">
-    <view class="avator">
+    <view class="avatar">
       <open-data type="userAvatarUrl"></open-data>
     </view>
     <view class="name">

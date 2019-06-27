@@ -1,0 +1,48 @@
+<!--components/news/index.wxml-->
+<view class="news">
+  <view class="news-header">
+    <view class="header-left">
+      <i-avatar class="avatar" src="{{ news.avatar }}" size="large"></i-avatar>
+    </view>
+    <view class="header-right">
+      <view class="name">{{ news.username }}</view>
+      <view class="time">{{ news.time }}</view>
+    </view>
+  </view>
+  <view class="news-body" bindtap="detailHandle">
+    <view class="content">{{ news.content }}</view>
+    <view class="single-image-view" wx:if="{{ news.images.length === 1 }}">
+      <image class="single-page" src="{{ news.images[0] }}" bindtap="previewHandle"></image>
+    </view>
+    <view class="image-view" wx:else>
+      <view 
+        class="auto-box"
+        wx:for="{{ news.images }}"
+        wx:for-index="idx"
+        wx:key="idx"
+      >
+        <view class="image-cell image-{{ idx }} total-{{ news.images.length }}">
+          <image 
+            class="image"
+            src="{{ item }}" 
+            bindtap="previewHandle" 
+            data-id="{{ idx }}" 
+            mode="aspectFill"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="news-footer">
+    <view class="footer-right">
+      <view class="repeat">
+        <i class="icon iconfont icon-repeat"></i>
+        <text class="repeat-count">{{ news.repeat_nums }}</text>
+      </view>
+      <view class="praise">
+        <i class="icon iconfont icon-praise {{ news.praise_status ? 'active' : '' }}"></i>
+        <text class="praise-count">{{ news.praise_nums }}</text>
+      </view>
+    </view>
+  </view>
+</view>

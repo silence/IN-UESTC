@@ -20,10 +20,10 @@
       title="密码"
       type="password"
       placeholder="请输入信息门户密码"
-      bindinput="pwdHandle"
+      bindchange="pwdHandle"
       maxlength='30'
     />
-    <view class="vertification">
+    <!-- <view class="vertification">
       <view class="label">验证码</view>
       <image 
         class="img" 
@@ -38,13 +38,13 @@
         bindinput="codeHandle"
         maxlength="6"
       ></input>
-    </view>
+    </view> -->
     <view class="tips">
       <text>提示：本系统暂只支持本科生</text>
     </view>
     <view class="err" wx:if="{{ errMsg }}">
       <text>{{ errMsg }}</text>
     </view>
-    <button bind:click="submitHandle" class="login-btn">登录</button>
+    <button bindtap="submitHandle" class="login-btn">登录</button>
   </view>
 </view>

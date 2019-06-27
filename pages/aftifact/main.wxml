@@ -2,19 +2,25 @@
   <header isBack bg title="IN成电"></header>
   <view class="main">
     <view class="item">
-      <image class="bg" src="/static/images/01.svg" mode="aspectFit"></image>
-      <text class="title">失物招领</text>
-      <text class="desc">丢失物品发布查找</text>
+      <navigator url="./">
+        <image class="bg" src="/static/images/01.svg" mode="aspectFit"></image>
+        <text class="title">失物招领</text>
+        <text class="desc">丢失物品发布查找</text>
+      </navigator>
     </view>
     <view class="item">
-      <image class="bg" src="/static/images/02.svg" mode="aspectFit"></image>
-      <text class="title">校车查询</text>
-      <text class="desc">校车线路、时间查询</text>
+      <navigator url="./schoolbus/main">
+        <image class="bg" src="/static/images/02.svg" mode="aspectFit"></image>
+        <text class="title">校车查询</text>
+        <text class="desc">校车线路、时间查询</text>
+      </navigator>
     </view>
     <view class="item">
-      <image class="bg" src="/static/images/03.svg" mode="aspectFit"></image>
-      <text class="title">一卡通查询</text>
-      <text class="desc">一卡通余额、消费查询</text>
+      <navigator url="./schoolbus/main">
+        <image class="bg" src="/static/images/03.svg" mode="aspectFit"></image>
+        <text class="title">一卡通查询</text>
+        <text class="desc">一卡通余额、消费查询</text>
+      </navigator>
     </view>
   </view>
 </view>
