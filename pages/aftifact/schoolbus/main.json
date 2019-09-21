@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "校车查询",
-  "usingComponents": {
-    "i-action-sheet": "/dist/iview/action-sheet/index",
-    "i-toast": "/dist/iview/toast/index",
-    "header": "/components/normalHeader/index"
-  }
-}

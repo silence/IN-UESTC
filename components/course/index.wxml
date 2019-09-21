@@ -1,8 +1,0 @@
-<view 
-  class="{{ classList }}" 
-  bindtap="tapHandle"
-  style="background: {{ course.color }}"
->
-  <view class="course-name">{{ course.course_name }}</view>
-  <view class="course-location">{{ course.course_location }}</view>
-</view>

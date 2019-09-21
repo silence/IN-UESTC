@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "header": "/components/normalHeader/index",
-    "i-input": "/dist/iview/input/index"
-  }
-}
