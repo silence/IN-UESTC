@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'test',
+  projectName: 'In成电',
   date: '2019-9-21',
   designWidth: 750,
   deviceRatio: {

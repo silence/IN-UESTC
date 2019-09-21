@@ -1,14 +1,16 @@
 import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-import Index from './pages/index'
+// import Index from './pages/index'
+import Date from './pages/date/main'
 import configStore from './store'
 import './app.scss'
+// import './sitemap.json'
 
 const store = configStore()
 
 interface AppConfig extends Config {
-  sitemapLocation: string
+  sitemapLocation?: string
 }
 
 class App extends Component {
@@ -21,26 +23,26 @@ class App extends Component {
    */
   config: AppConfig = {
     pages: [
-      'pages/ground/detail/main',
+      // 'pages/ground/detail/main',
       'pages/ground/main',
-      'pages/ground/add/main',
+      // 'pages/ground/add/main',
       'pages/date/main',
-      'pages/aftifact/lost/add/main',
+      // 'pages/aftifact/lost/add/main',
       'pages/aftifact/main',
-      'pages/aftifact/schoolbus/main',
+      // 'pages/aftifact/schoolbus/main',
       'pages/arrivals/main',
-      'pages/user/main',
-      'pages/user/message/main',
-      'pages/user/profile/main',
-      'pages/user/issue/main',
-      'components/news/index'
+      'pages/user/main'
+      // 'pages/user/message/main',
+      // 'pages/user/profile/main',
+      // 'pages/user/issue/main',
+      // 'components/news/index'
     ],
     window: {
       navigationStyle: 'custom'
     },
-    usingComponents: {
-      'i-message': './dist/iview/message/index'
-    },
+    // usingComponents: {
+    //   'i-message': './dist/iview/message/index'
+    // },
     tabBar: {
       selectedColor: '#4cc9ac',
       list: [
@@ -75,8 +77,8 @@ class App extends Component {
           selectedIconPath: 'static/icon/user-active.png'
         }
       ]
-    },
-    sitemapLocation: 'sitemap.json'
+    }
+    // sitemapLocation: 'sitemap.json'
   }
   componentWillUnmount() {
     console.log(1)
@@ -103,7 +105,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Index />
+        <Date />
       </Provider>
     )
   }
