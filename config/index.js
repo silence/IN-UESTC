@@ -1,3 +1,5 @@
+const path = require('path')
+
 const config = {
   projectName: 'In成电',
   date: '2019-9-21',
@@ -29,8 +31,11 @@ const config = {
   },
   defineConstants: {},
   copy: {
-    patterns: [],
+    patterns: [{ from: 'src/static/', to: 'dist/static/' }],
     options: {}
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
   },
   weapp: {
     module: {

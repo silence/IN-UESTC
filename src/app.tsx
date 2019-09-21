@@ -6,7 +6,6 @@ import Date from './pages/date/main'
 import configStore from './store'
 import './app.scss'
 // import './sitemap.json'
-
 const store = configStore()
 
 interface AppConfig extends Config {

@@ -1,0 +1,29 @@
+@import '../../iconfont.wxss';
+.normal-header {
+  width: 100%;
+  height: 140rpx;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+}
+
+.back {
+  position: absolute;
+  top: 54%;
+  left: 50rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.icon-back {
+  font-size: 26rpx;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  color: #fff;
+  font-size: 32rpx;
+}
