@@ -1,13 +1,17 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "test",
-  "description": "in成电",
-  "appid": "touristappid",
+  "miniprogramRoot": "dist/",
+  "projectname": "In成电",
+  "description": "In成电",
+  "appid": "wxf7815f3e2180822b",
   "setting": {
     "urlCheck": true,
     "es6": false,
     "postcss": false,
     "minified": false
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "libVersion": "2.8.3",
+  "condition": {}
 }

@@ -1,20 +1,15 @@
 import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-
 import Index from './pages/index'
-
 import configStore from './store'
-
 import './app.scss'
 
-// 如果需要在 h5 环境中开启 React Devtools
-// 取消以下注释：
-// if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
-//   require('nerv-devtools')
-// }
-
 const store = configStore()
+
+interface AppConfig extends Config {
+  sitemapLocation: string
+}
 
 class App extends Component {
   /**
@@ -24,23 +19,84 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
-    pages: ['pages/index/index'],
+  config: AppConfig = {
+    pages: [
+      'pages/ground/detail/main',
+      'pages/ground/main',
+      'pages/ground/add/main',
+      'pages/date/main',
+      'pages/aftifact/lost/add/main',
+      'pages/aftifact/main',
+      'pages/aftifact/schoolbus/main',
+      'pages/arrivals/main',
+      'pages/user/main',
+      'pages/user/message/main',
+      'pages/user/profile/main',
+      'pages/user/issue/main',
+      'components/news/index'
+    ],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationStyle: 'custom'
+    },
+    usingComponents: {
+      'i-message': './dist/iview/message/index'
+    },
+    tabBar: {
+      selectedColor: '#4cc9ac',
+      list: [
+        {
+          pagePath: 'pages/date/main',
+          text: '日程',
+          iconPath: 'static/icon/date.png',
+          selectedIconPath: 'static/icon/date-active.png'
+        },
+        {
+          pagePath: 'pages/aftifact/main',
+          text: '神器',
+          iconPath: 'static/icon/aftifact.png',
+          selectedIconPath: 'static/icon/aftifact-active.png'
+        },
+        {
+          pagePath: 'pages/ground/main',
+          text: '广场',
+          iconPath: 'static/icon/ground.png',
+          selectedIconPath: 'static/icon/ground-active.png'
+        },
+        {
+          pagePath: 'pages/arrivals/main',
+          text: '直达',
+          iconPath: 'static/icon/arrivals.png',
+          selectedIconPath: 'static/icon/arrivals-active.png'
+        },
+        {
+          pagePath: 'pages/user/main',
+          text: '我的',
+          iconPath: 'static/icon/user.png',
+          selectedIconPath: 'static/icon/user-active.png'
+        }
+      ]
+    },
+    sitemapLocation: 'sitemap.json'
+  }
+  componentWillUnmount() {
+    console.log(1)
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log(2)
+  }
 
-  componentDidShow() {}
+  componentDidShow() {
+    console.log(3)
+  }
 
-  componentDidHide() {}
+  componentDidHide() {
+    console.log(4)
+  }
 
-  componentDidCatchError() {}
+  componentDidCatchError() {
+    console.log(5)
+  }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数

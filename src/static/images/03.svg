@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="351px" height="136px" viewBox="0 0 351 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>卡片</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="43.5843172%" x2="0%" y2="56.4156828%" id="linearGradient-1">
+            <stop stop-color="#4cc9ac" offset="0%"></stop>
+            <stop stop-color="#51dbbb" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="335" height="120" rx="6"></rect>
+        <filter x="-3.9%" y="-9.2%" width="107.8%" height="121.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-XS" transform="translate(-12.000000, -355.000000)">
+            <g id="一卡通" transform="translate(20.000000, 361.000000)">
+                <g id="卡片">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <g mask="url(#mask-3)" fill="#FFFFFF" fill-opacity="0.8" fill-rule="nonzero" id="形状">
+                        <g transform="translate(207.907195, 13.000000)">
+                            <path d="M160.092805,19.7635135 C160.092805,8.84966216 150.881376,0 139.521376,0 L20.6642335,0 C9.30423353,0 0.0928049609,8.84966216 0.0928049609,19.7635135 L0.0928049609,110.236486 C0.0928049609,121.150338 9.30423353,130 20.6642335,130 L139.521376,130 C150.881376,130 160.092805,121.150338 160.092805,110.236486 L160.092805,19.7635135 Z M18.2478477,14 L142.268589,14 C146.203863,14 149.423632,17.3907767 149.423632,21.5350592 L149.423632,39.87037 L11.092805,39.87037 L11.092805,21.5350592 C11.092805,17.3907767 14.3125742,14 18.2478477,14 Z M137.015024,120.759259 L18.3735931,120.759259 C14.6090093,120.759259 11.5288952,117.639518 11.5288952,113.826501 L11.5288952,49.3518519 L143.859722,49.3518519 L143.859722,113.826501 C143.859722,117.639518 140.779608,120.759259 137.015024,120.759259 Z M59.4452678,86.6666667 L28.559891,86.6666667 C24.7900583,86.6666667 21.7469403,89.6237654 21.7469403,93.287037 C21.7469403,96.9503086 24.7900583,99.9074074 28.559891,99.9074074 L59.4452678,99.9074074 C63.2151005,99.9074074 66.2582185,96.9503086 66.2582185,93.287037 C66.2582185,89.6237654 63.2151005,86.6666667 59.4452678,86.6666667 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
