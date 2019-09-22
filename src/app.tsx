@@ -23,11 +23,13 @@ class App extends Component {
   config: AppConfig = {
     pages: [
       // 'pages/ground/detail/main',
+      'pages/aftifact/lost/main',
       'pages/ground/main',
       // 'pages/ground/add/main',
       'pages/date/main',
       // 'pages/aftifact/lost/add/main',
-      'pages/aftifact/main',
+      'pages/aftifact/index/main',
+
       // 'pages/aftifact/schoolbus/main',
       'pages/arrivals/main',
       'pages/user/main'
@@ -52,7 +54,7 @@ class App extends Component {
           selectedIconPath: 'static/icon/date-active.png'
         },
         {
-          pagePath: 'pages/aftifact/main',
+          pagePath: 'pages/aftifact/index/main',
           text: '神器',
           iconPath: 'static/icon/aftifact.png',
           selectedIconPath: 'static/icon/aftifact-active.png'

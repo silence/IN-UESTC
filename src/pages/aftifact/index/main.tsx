@@ -9,7 +9,7 @@ export default () => {
       <Header title="IN成电" bg isback></Header>
       <View className="main">
         <View className="item">
-          <Navigator url="./">
+          <Navigator url="../lost/main">
             <Image className="bg" src="/static/images/01.svg" mode="aspectFit"></Image>
             <Text className="title">失物招领</Text>
             <Text className="desc">丢失物品发布查找</Text>
