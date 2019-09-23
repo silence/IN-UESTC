@@ -8,7 +8,7 @@ export default () => {
   const [value, setValue] = useState('')
   return (
     <View className="lost page">
-      <Header isback bg title="失物招领"></Header>
+      <Header isBack bg title="失物招领"></Header>
       <View className="main">
         <View className="banner">
           <View className="search">
@@ -18,7 +18,7 @@ export default () => {
               type="text"
               placeholder="搜索"
               value={value}
-              onChange={value => setValue(value)}
+              onChange={(value: string) => setValue(value)}
             />
           </View>
           <View className="add">发布</View>

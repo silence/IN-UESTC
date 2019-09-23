@@ -4,7 +4,7 @@ import './index.scss'
 
 interface IProps {
   bg: boolean
-  isback: boolean
+  isBack: boolean
   title: string
   children?: any
 }
@@ -12,7 +12,7 @@ interface IProps {
 export default function Header(props: IProps) {
   return (
     <View className="normal-header" style={{ background: `${props.bg ? '#4cc9ac' : 'none'}` }}>
-      {props.isback ? (
+      {props.isBack ? (
         <View
           className="back"
           onClick={() => {
@@ -31,6 +31,6 @@ export default function Header(props: IProps) {
 
 Header.defaultProps = {
   bg: false,
-  isback: false,
+  isBack: false,
   title: ''
 }

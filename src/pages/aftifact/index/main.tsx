@@ -6,7 +6,7 @@ import './main.scss'
 export default () => {
   return (
     <View className="aftifact page">
-      <Header title="IN成电" bg isback></Header>
+      <Header title="IN成电" bg></Header>
       <View className="main">
         <View className="item">
           <Navigator url="../lost/main">
@@ -16,14 +16,14 @@ export default () => {
           </Navigator>
         </View>
         <View className="item">
-          <Navigator url="./schoolbus/main">
+          <Navigator url="./schoolBus/main">
             <Image className="bg" src="/static/images/02.svg" mode="aspectFit"></Image>
             <Text className="title">校车查询</Text>
             <Text className="desc">校车线路、时间查询</Text>
           </Navigator>
         </View>
         <View className="item">
-          <Navigator url="./schoolbus/main">
+          <Navigator url="./schoolBus/main">
             <Image className="bg" src="/static/images/03.svg" mode="aspectFit"></Image>
             <Text className="title">一卡通查询</Text>
             <Text className="desc">一卡通余额、消费查询</Text>
