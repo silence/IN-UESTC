@@ -1,24 +1,46 @@
-import Taro from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
-import Header from '@/components/SimpleHeader'
-import Course from '@/components/Course'
+import Taro, { useState, useEffect } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import { Header, Course, ICourse } from '@/components'
 import './main.scss'
+import mockData from './__mock__data'
+
+interface T extends ICourse {
+  color: string
+}
+enum Colors {
+  '#49BE75',
+  '#99CCFF',
+  '#FFCCCC',
+  '#FFCC99',
+  '#A799DB',
+  '#FF6666',
+  '#CCCCFF',
+  '#98DBDE',
+  '#8FD899',
+  '#66CCFF'
+}
 
 export default () => {
+  const [data, setData] = useState([] as Array<T>)
+  useEffect(() => {
+    setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
+  }, [])
   return (
     <View className="date-page">
       <Header isBack bg title="IN成电"></Header>
       <View className="date-axis">
-        <View className={`date-axis-item ${weekday.curr ? 'currday' : ''}`}>
-          <View className="day">{weekday.day}</View>
-          <View className="date">{weekday.date}</View>
+        <View className="">
+          <View className="day">{}</View>
+          <View className="date">{}</View>
         </View>
       </View>
       <View className="no-axis">
-        <View className="no-axis-item">{val}</View>
+        <View className="no-axis-item">{}</View>
       </View>
       <View className="date-body">
-        <Course course={{}} selectHandle="selectHandle" />
+        {data.map((item, index) => (
+          <Course course={item} key={index} />
+        ))}
       </View>
     </View>
   )

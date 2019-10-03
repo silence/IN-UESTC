@@ -2,17 +2,18 @@ import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import './index.scss'
 
+export interface ICourse {
+  color: string
+  course_day: number
+  course_id: number
+  course_location: string
+  course_name: string
+  course_teacher: string
+  course_time: string
+  course_week: string
+}
 interface IProps {
-  course: {
-    color: string
-    course_day: number
-    course_id: number
-    course_location: string
-    course_name: string
-    course_teacher: string
-    course_time: string
-    course_week: string
-  }
+  course: ICourse
 }
 
 export default (props: IProps) => {

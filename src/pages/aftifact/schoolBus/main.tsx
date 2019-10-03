@@ -1,7 +1,7 @@
 import Taro, { Component, ComponentClass } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 // import { AtIcon, AtInput } from 'taro-ui'
-import Header from '@/components/SimpleHeader'
+import { Header } from '@/components'
 import './main.scss'
 
 enum Days {

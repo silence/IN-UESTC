@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 import { View, Text, Image, Navigator } from '@tarojs/components'
-import Header from '@/components/SimpleHeader'
+import { Header } from '@/components'
 import './main.scss'
 
 export default () => {
