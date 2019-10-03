@@ -1,8 +1,9 @@
 import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Header, Course, ICourse } from '@/components'
-import './main.scss'
+import { weekToday } from '@/utils'
 import mockData from './__mock__data'
+import './main.scss'
 
 interface T extends ICourse {
   color: string
@@ -22,6 +23,9 @@ enum Colors {
 
 export default () => {
   const [data, setData] = useState([] as Array<T>)
+  const [weeks, setWeeks] = useState(new Array())
+  const noAxis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
   useEffect(() => {
     setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
   }, [])
