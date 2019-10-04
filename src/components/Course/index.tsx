@@ -16,7 +16,7 @@ interface IProps {
   course: ICourse
 }
 
-export default (props: IProps) => {
+export default function Course(props: IProps) {
   const [classList, setClassList] = useState(new Array())
   const course = props.course
   useEffect(() => {
@@ -29,7 +29,6 @@ export default (props: IProps) => {
       `top-${course_start}`,
       `left-${courseDay}`
     ])
-    // 设为空数组，只会执行一次
   }, [])
   return (
     <View
@@ -41,4 +40,17 @@ export default (props: IProps) => {
       <View className="course-location">{course.course_location}</View>
     </View>
   )
+}
+
+Course.defaultProps = {
+  course: {
+    color: '',
+    course_day: 1,
+    course_id: 1,
+    course_location: '',
+    course_name: '',
+    course_teacher: '',
+    course_time: '',
+    course_week: ''
+  }
 }

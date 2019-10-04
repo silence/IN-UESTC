@@ -9,11 +9,6 @@ import './main.scss'
 interface T extends ICourse {
   color: string
 }
-interface W {
-  date: string
-  day: string
-  curr: boolean
-}
 enum Colors {
   '#49BE75',
   '#99CCFF',
@@ -29,22 +24,20 @@ enum Colors {
 
 export default () => {
   const [data, setData] = useState([] as Array<T>)
-  const [weeks, setWeeks] = useState([] as Array<W>)
   const noAxis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   const days = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+  const weeks = days.map((value, index) => {
+    const bias = index + 1 - weekToday()
+    const date = bias < 0 ? subDays(Math.abs(bias)) : addDays(bias)
+    const dateString = date.toLocaleDateString().split('/')
+    dateString.pop()
+    return {
+      date: dateString.join('/'),
+      day: value,
+      curr: bias === 0
+    }
+  })
   useEffect(() => {
-    const weeksList = days.map((value, index) => {
-      const bias = index + 1 - weekToday()
-      const date = bias < 0 ? subDays(Math.abs(bias)) : addDays(bias)
-      const dateString = date.toLocaleDateString().split('/')
-      dateString.pop()
-      return {
-        date: dateString.join('/'),
-        day: value,
-        curr: bias === 0
-      }
-    })
-    setWeeks(() => weeksList)
     sleep().then(() => {
       setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
     })
@@ -53,16 +46,16 @@ export default () => {
     <View className="date-page">
       <Header isBack bg title="IN成电"></Header>
       <View className="date-axis">
-        {weeks.map((item, index) => (
-          <View className={`date-axis-item ${item.curr ? 'currday' : ''}`} key={index}>
+        {weeks.map(item => (
+          <View className={`date-axis-item ${item.curr ? 'currday' : ''}`} key={item.day}>
             <View className="day">{item.day}</View>
             <View className="date">{item.date}</View>
           </View>
         ))}
       </View>
       <View className="no-axis">
-        {noAxis.map((val, index) => (
-          <View className="no-axis-item" key={index}>
+        {noAxis.map(val => (
+          <View className="no-axis-item" key={val}>
             {val}
           </View>
         ))}
@@ -71,7 +64,7 @@ export default () => {
         {data.length === 0 ? (
           <AtActivityIndicator mode="center"></AtActivityIndicator>
         ) : (
-          data.map((item, index) => <Course course={item} key={index} />)
+          data.map(item => <Course course={item} key="" />)
         )}
       </View>
     </View>
