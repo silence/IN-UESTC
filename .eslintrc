@@ -3,7 +3,8 @@
   "rules": {
     "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "import/no-commonjs": false
+    "import/no-commonjs": false,
+    "no-array-index-key": false
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

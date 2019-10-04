@@ -23,10 +23,11 @@ class App extends Component {
   config: AppConfig = {
     pages: [
       // 'pages/ground/detail/main',
+      'pages/date/main',
       'pages/aftifact/index/main',
       'pages/ground/main',
       // 'pages/ground/add/main',
-      'pages/date/main',
+
       // 'pages/aftifact/lost/add/main',
 
       'pages/aftifact/lost/main',

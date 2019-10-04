@@ -1,12 +1,18 @@
 import Taro, { useState, useEffect } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { Header, Course, ICourse } from '@/components'
-import { weekToday } from '@/utils'
+import { weekToday, addDays, subDays } from '@/utils'
+import { AtActivityIndicator } from 'taro-ui'
 import mockData from './__mock__data'
 import './main.scss'
 
 interface T extends ICourse {
   color: string
+}
+interface W {
+  date: string
+  day: string
+  curr: boolean
 }
 enum Colors {
   '#49BE75',
@@ -23,69 +29,57 @@ enum Colors {
 
 export default () => {
   const [data, setData] = useState([] as Array<T>)
-  const [weeks, setWeeks] = useState(new Array())
+  const [weeks, setWeeks] = useState([] as Array<W>)
   const noAxis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-
+  const days = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
   useEffect(() => {
-    setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
+    const weeksList = days.map((value, index) => {
+      const bias = index + 1 - weekToday()
+      const date = bias < 0 ? subDays(Math.abs(bias)) : addDays(bias)
+      const dateString = date.toLocaleDateString().split('/')
+      dateString.pop()
+      return {
+        date: dateString.join('/'),
+        day: value,
+        curr: bias === 0
+      }
+    })
+    setWeeks(() => weeksList)
+    sleep().then(() => {
+      setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
+    })
   }, [])
   return (
     <View className="date-page">
       <Header isBack bg title="IN成电"></Header>
       <View className="date-axis">
-        <View className="">
-          <View className="day">{}</View>
-          <View className="date">{}</View>
-        </View>
+        {weeks.map((item, index) => (
+          <View className={`date-axis-item ${item.curr ? 'currday' : ''}`} key={index}>
+            <View className="day">{item.day}</View>
+            <View className="date">{item.date}</View>
+          </View>
+        ))}
       </View>
       <View className="no-axis">
-        <View className="no-axis-item">{}</View>
+        {noAxis.map((val, index) => (
+          <View className="no-axis-item" key={index}>
+            {val}
+          </View>
+        ))}
       </View>
       <View className="date-body">
-        {data.map((item, index) => (
-          <Course course={item} key={index} />
-        ))}
+        {data.length === 0 ? (
+          <AtActivityIndicator mode="center"></AtActivityIndicator>
+        ) : (
+          data.map((item, index) => <Course course={item} key={index} />)
+        )}
       </View>
     </View>
   )
 }
 
-/**
- * <!--pages/date/main.wxml-->
-<view class="date-page">
-  <header isBack bg title="IN成电"></header>
-  <view class="date-axis">
-    <view  
-      wx:for="{{weeks}}" 
-      wx:for-index="idx" 
-      wx:key="idx" 
-      wx:for-item="weekday"
-      class="{{ ['date-axis-item', weekday.curr ? 'currday' : ''] }}"
-    >
-      <view class="day">{{ weekday.day }}</view>
-      <view class="date">{{ weekday.date }}</view>
-    </view>
-  </view>
-  <view class="no-axis">
-    <view
-      class="no-axis-item"
-      wx:for="{{noAxis}}"
-      wx:for-index="idx"
-      wx:for-item="val"
-      wx:key="idx"
-    >
-      {{ val }}
-    </view>
-  </view>
-  <view class="date-body">
-    <course 
-      wx:for="{{ testData }}"
-      wx:for-item="item"
-      wx:for-index="idx"
-      wx:key="idx"
-      course="{{ item }}" 
-      selectHandle="selectHandle" />
-  </view>
-</view>
-
- */
+async function sleep() {
+  return await new Promise(res => {
+    setTimeout(() => res(console.log('waiting 3s')), 3000)
+  })
+}

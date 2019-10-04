@@ -16,4 +16,22 @@ function weekToday(): number {
   return Days[Date().split(' ')[0]]
 }
 
-export { weekToday }
+/**
+ * https://github.com/you-dont-need/You-Dont-Need-Momentjs#add
+ * moment().add()
+ */
+function addDays(num: number): Date {
+  const now = new Date()
+  now.setDate(now.getDate() + num)
+  return now
+}
+
+/**
+ * https://github.com/you-dont-need/You-Dont-Need-Momentjs#subtract
+ * moment().subtract()
+ */
+function subDays(num: number): Date {
+  return new Date(new Date().getTime() - 1000 * 60 * 60 * 24 * num)
+}
+
+export { weekToday, addDays, subDays }
