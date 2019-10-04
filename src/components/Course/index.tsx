@@ -29,6 +29,7 @@ export default function Course(props: IProps) {
       `top-${course_start}`,
       `left-${courseDay}`
     ])
+    // 设置为空数组只会执行一次
   }, [])
   return (
     <View

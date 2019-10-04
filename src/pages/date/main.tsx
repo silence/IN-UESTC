@@ -24,20 +24,20 @@ enum Colors {
 
 export default () => {
   const [data, setData] = useState([] as Array<T>)
+  const [weeks, setWeeks] = useState(new Array())
   const noAxis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   const days = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-  const weeks = days.map((value, index) => {
+  const weekList = days.map((value, index) => {
     const bias = index + 1 - weekToday()
     const date = bias < 0 ? subDays(Math.abs(bias)) : addDays(bias)
-    const dateString = date.toLocaleDateString().split('/')
-    dateString.pop()
     return {
-      date: dateString.join('/'),
+      date: `${date.getMonth() + 1}/${date.getDate()}`,
       day: value,
       curr: bias === 0
     }
   })
   useEffect(() => {
+    setWeeks(() => weekList)
     sleep().then(() => {
       setData(() => mockData.map(item => ({ ...item, color: Colors[item.course_id] })))
     })
