@@ -1,3 +1,7 @@
+# Deprecated
+
+> 泥电沙雕教务系统登陆加密了，🙃再见
+
 <pre align='center'>
 <br>
 <br>
@@ -9,9 +13,11 @@
   \/_/\/_/ \/_/     \/_____/\/_____/\/_____/  \/_/  \/_____/ 
 </b>
 <br>
-<br>
-In UESTC 
-Still Work In Progress
-<br>
+It has been deprecated
 <br>
 </pre>
+
+
+
+
+
